@@ -1,4 +1,4 @@
-const fills=document.querySelectorAll('.feature-fill');
+const fills=document.querySelectorAll('.stat-fill');
 
 window.onload=()=>{
 
