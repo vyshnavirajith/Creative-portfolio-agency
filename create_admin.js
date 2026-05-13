@@ -14,7 +14,7 @@
             }
 
             else{
-                window.location.href="admin_dashboard.html"
+                window.location.href="dashboard.html"
             }
         }
 
