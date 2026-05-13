@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="login.css" rel="stylesheet">
+    <script src="login.js"></script>
+</head>
+<body>
+    <h2 class="a">Nova</h2>
+    <div class="div1">
+        <p class="b">VISITOR ACCESS</p>
+        <h1 class="c">Just Browsing?</h1>
+        <h1 class="c1">Come on in.</h1>
+        <p class="d">Explore our full portfolio, services, and work — no <br>account or sign-in needed.</p>
+        <a href="home.html"><button class="e">ENTER AS VISITOR</button></a>
+        <p class="f">-------------No Sign in required-------------</p>
+    </div>
+    <button class="g">OR</button>
+    <hr>
+    <div class="div2">
+        <p class="b" style="color: rgb(103, 129, 165);">ADMIN ACCESS</p>
+        <h1 class="c">Manage your studio</h1>
+        <h1 class="c1"></h1>
+        <p class="d">Sign in to manage projects, respond to inquiries, and update your portfolio.</p><br>
+        <forms>
+            <label for="email">EMAIL ADDRESS</label><br>
+            <input type="email" id="email" name="email" placeholder="admin@studio.com"><br><br>
+            <label for="password">PASSWORD</label><br>
+            <input type="password" id="password" name="password" placeholder="Enter your password"><br>
+            <input type="checkbox" name="rme" id="rme" onclick="rme()">
+            <label for="rme">Remember me</label>
+            <a href="forgotpwd.html"><span class="forgot">Forgot Password?</span></a>
+            <br>
+            <button class="h" type="button" onclick="check()">SIGN IN AS ADMIN</button>
+            <a href="create_admin.html"><span class="j">Create admin account</span></a>
+            <span class="i">First time?  </span>
+        </forms>
+    </div>
+</body>
+</html>

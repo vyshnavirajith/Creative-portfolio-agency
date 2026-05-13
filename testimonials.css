@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0b1120;
+    color:white;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#020617;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#38bdf8;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:55px;
+}
+
+.hero p{
+    margin-top:15px;
+    color:#cbd5e1;
+}
+
+.testimonials{
+    width:85%;
+    margin:auto;
+    padding-bottom:60px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#111827;
+    padding:35px;
+    border-radius:20px;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+.card h3{
+    color:#38bdf8;
+    margin-top:20px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020617;
+}
+.line{
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right,transparent,#334155,transparent);
+            margin-top: 18px;
+        }
+        .navbar{
+            background-color: rgba(5, 10, 25, 0.95);
+            padding: 20px 7%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+       
+
+        .nav-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        ul{
+            display: flex;
+            gap: 30px;
+            padding-left: 120px;
+        }
+
+        li{
+            list-style: none;
+        }
+
+        li a{
+            text-decoration: none;
+            color: #d1d5db;
+            transition: 0.3s;
+            font-size: 15px;
+        }
+
+        li a:hover{
+            color: #f5b041;
+        }
+
+        .testimonial{
+            color: #f5b041;
+        }

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Forgot Password</title>
+    <link href="forgotpwd.css" rel="stylesheet">
+    <script src="forgotpwd.js"></script>
+
+</head>
+
+<body>
+
+    <h2>Forgot Password?</h2>
+
+    <div class="container">
+
+        <div class="input-box">
+            <label for="fname">Username</label>
+            <input id="fname" type="text" placeholder="Enter username">
+        </div>
+
+        <div class="input-box">
+            <label for="email">Email ID</label>
+            <input type="email" id="email" placeholder="Enter email">
+        </div>
+
+        <div class="input-box">
+            <label for="tel">Phone Number</label>
+            <input type="tel" id="tel" placeholder="Enter phone number">
+        </div>
+
+        <button type="button" onclick="check()">
+            Send OTP
+        </button>
+
+        <div class="space"></div>
+
+        <div class="input-box">
+            <label for="otp">Enter OTP</label>
+            <input type="text" id="otp" placeholder="Enter OTP">
+        </div>
+
+        <div class="input-box">
+            <label for="p">New Password</label>
+            <input type="password" id="p" placeholder="Enter new password">
+        </div>
+
+        <div class="input-box">
+            <label for="cp">Confirm Password</label>
+            <input type="password" id="cp" placeholder="Confirm password">
+        </div>
+
+        <button type="button" onclick="login()">
+            Login
+        </button>
+
+    </div>
+
+</body>
+
+</html>

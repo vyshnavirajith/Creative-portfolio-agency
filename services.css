@@ -1,0 +1,137 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0b1120;
+    color:white;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#020617;
+}
+
+.logo{
+    font-size:28px;
+    color:#38bdf8;
+    font-weight:700;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:55px;
+}
+
+.hero p{
+    margin-top:15px;
+    color:#cbd5e1;
+}
+
+.service{
+    width:75%;
+    margin:auto;
+    padding-bottom:30px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#111827;
+    padding:35px;
+    border-radius:20px;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background:#1e293b;
+}
+
+.card h2{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020617;
+}
+.navbar{
+            background-color: rgba(5, 10, 25, 0.95);
+            padding: 20px 7%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .head{
+            color: white;
+            letter-spacing: 3px;
+            font-size: 28px;
+        }
+
+        ul{
+            display: flex;
+            gap: 30px;
+        }
+
+        li{
+            list-style: none;
+        }
+
+        li a{
+            text-decoration: none;
+            color: #d1d5db;
+            transition: 0.3s;
+            font-size: 15px;
+        }
+
+        li a:hover{
+            color: #f5b041;
+        }
+
+        .services{
+            color: #f5b041;
+        }
+        .line{
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right,transparent,#334155,transparent);
+            margin-top: 18px;
+        }
+        .nav{
+            display: flex;
+            gap: 20px;
+        }

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add New Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+
+        <div class="sidebar">
+
+            <h2 class="logo">NOVA</h2>
+
+            <a href="dashboard.html" class="menu">Dashboard</a>
+
+            <a href="projects.html" class="menu active">Projects</a>
+
+        </div>
+
+        <!-- Main Content -->
+
+        <div class="main">
+
+            <h1>Add New Project</h1>
+
+            <form class="form" id="projectForm">
+
+                <!-- Row 1 -->
+
+                <div class="row">
+
+                    <div class="input-box">
+                        <label>PROJECT TITLE</label>
+
+                        <input type="text"
+                            placeholder="e.g. Lumina Co. Branding">
+                    </div>
+
+                    <div class="input-box">
+                        <label>CLIENT NAME</label>
+
+                        <input type="text"
+                            placeholder="Client or Company">
+                    </div>
+
+                </div>
+
+                <!-- Row 2 -->
+
+                <div class="row">
+
+                    <div class="input-box">
+                        <label>CATEGORY</label>
+
+                        <select>
+                            <option>Branding</option>
+                            <option>UI/UX</option>
+                            <option>Marketing</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label>YEAR</label>
+
+                        <input type="number"
+                            placeholder="2024">
+                    </div>
+
+                </div>
+
+                <!-- Description -->
+
+                <div class="input-box">
+
+                    <label>PROJECT DESCRIPTION</label>
+
+                    <textarea
+                        placeholder="Describe the project, goals, and deliverables..."></textarea>
+
+                </div>
+
+                <!-- Upload -->
+
+                <div class="input-box">
+
+                    <label>UPLOAD IMAGES</label>
+
+                    <div class="upload-box">
+                        Drag & Drop Images Here or
+                        <span>browse files</span>
+                    </div>
+
+                </div>
+
+                <!-- Tags -->
+
+                <div class="input-box">
+
+                    <label>TAGS (comma-separated)</label>
+
+                    <input type="text"
+                        placeholder="logo, typography, brand guide">
+
+                </div>
+
+                <!-- Status -->
+
+                <div class="input-box">
+
+                    <label>STATUS</label>
+
+                    <select>
+                        <option>Draft</option>
+                        <option>Published</option>
+                    </select>
+
+                </div>
+
+                <!-- Buttons -->
+
+                <div class="button-group">
+
+                    <button class="btn">
+                        Save & Publish
+                    </button>
+
+                    <button class="btn secondary">
+                        Save Draft
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#050816;
+    color:white;
+}
+
+
+
+header{
+    width:100%;
+    padding:20px 8%;
+    background:#070b1f;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:4px;
+    color:#c084fc;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    font-size:17px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#c084fc;
+}
+
+
+
+.hero{
+    height:260px;
+    background:linear-gradient(to right,#3b0764,#7e22ce);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero img{
+    width:120px;
+}
+
+
+
+.container{
+    width:85%;
+    margin:auto;
+    padding:50px 0;
+}
+
+
+
+.back{
+    color:#c084fc;
+    text-decoration:none;
+    font-size:18px;
+}
+
+ 
+
+.category{
+    margin-top:30px;
+    letter-spacing:6px;
+    color:#c084fc;
+    font-size:15px;
+}
+
+
+
+.title{
+    font-size:55px;
+    margin-top:15px;
+    margin-bottom:30px;
+}
+
+
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-bottom:35px;
+}
+
+.tag{
+    border:1px solid #7e22ce;
+    padding:12px 25px;
+    border-radius:10px;
+    background:#0b1025;
+}
+
+
+
+.description{
+    color:#cbd5e1;
+    line-height:1.9;
+    font-size:18px;
+    margin-bottom:50px;
+}
+
+
+
+.info-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-bottom:50px;
+}
+
+.info-card{
+    border:1px solid #6b21a8;
+    background:#0b1025;
+    padding:30px;
+    border-radius:18px;
+
+    transition:0.4s;
+}
+
+.info-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 20px rgba(192,132,252,0.3);
+}
+
+.info-card h3{
+    color:#c084fc;
+    letter-spacing:4px;
+    margin-bottom:15px;
+    font-size:14px;
+}
+
+.info-card p{
+    font-size:26px;
+}
+
+
+.stats{
+    margin-top:20px;
+}
+
+.stat{
+    margin-bottom:30px;
+}
+
+.stat-info{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:10px;
+}
+
+.stat-bar{
+    width:100%;
+    height:10px;
+    background:#1e293b;
+    border-radius:20px;
+}
+
+.stat-fill{
+    height:100%;
+    background:#c084fc;
+    border-radius:20px;
+
+    width:0;
+    transition:2s;
+}
+
+
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#070b1f;
+    margin-top:50px;
+    color:#94a3b8;
+}
+
+
+
+@media(max-width:768px){
+
+.title{
+    font-size:38px;
+}
+
+nav{
+    display:none;
+}
+
+.hero{
+    height:220px;
+}
+
+.hero img{
+    width:90px;
+}
+
+}
