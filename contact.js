@@ -12,39 +12,9 @@ function sendMessage(){
 
 
 
-    if(name == ""){
+    if(name == "" || email == "" || project == "" || message == ""){
 
-        alert("Please enter your name");
-
-        return;
-
-    }
-
-
-
-    if(email == ""){
-
-        alert("Please enter your email");
-
-        return;
-
-    }
-
-
-
-    if(project == ""){
-
-        alert("Please select project type");
-
-        return;
-
-    }
-
-
-
-    if(message == ""){
-
-        alert("Please enter your message");
+        alert("Please fill all the form fields");
 
         return;
 
