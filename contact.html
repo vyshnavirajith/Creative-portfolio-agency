@@ -9,55 +9,84 @@
 </head>
 
 <body>
+
 <div class="navbar">
-        <div class="nav-container">
-            <h2 class="head">NOVA</h2>
-            <ul class="nav">
-                <li><a href="home.html" class="home">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="contact">Contact</a></li>
-                <li><a href="testimonials.html">Testimonial</a></li>
-            </ul>
-        </div>
-        <div class="line"></div>
+    
+    <div class="nav-container">
+
+        <h2 class="head">NOVA</h2>
+
+        <ul class="nav">
+            <li><a href="home.html" class="home">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="contact">Contact</a></li>
+            <li><a href="testimonials.html">Testimonial</a></li>
+        </ul>
+
     </div>
+
+    <div class="line"></div>
+
+</div>
 
 <div class="container">
 
     <div class="left">
 
         <h3>GET IN TOUCH</h3>
+
         <h1>Let's Work Together</h1>
 
         <div class="input-box">
+
             <label>Your Name</label>
-            <input type="text" placeholder="Enter Name" required>
+
+            <input type="text"
+            id="name"
+            placeholder="Enter Name">
+
         </div>
 
         <div class="input-box">
+
             <label>Email Address</label>
-            <input type="email" placeholder="Enter email address" required>
+
+            <input type="email"
+            id="email"
+            placeholder="Enter email address">
+
         </div>
 
         <div class="input-box">
+
             <label>Project Type</label>
 
-            <select>
+            <select id="project">
+
+                <option value="">Select Project</option>
                 <option>Branding</option>
                 <option>Web Design</option>
                 <option>UI/UX</option>
+
             </select>
+
         </div>
 
         <div class="input-box">
+
             <label>Your Message</label>
 
-            <textarea placeholder="Tell us about your project..." required></textarea>
+            <textarea
+            id="message"
+            placeholder="Tell us about your project..."></textarea>
+
         </div>
 
-        <button onclick="sendMessage()">Send Message</button>
+        <button type="button" onclick="sendMessage()">
+            Send Message
+        </button>
 
     </div>
 
@@ -73,7 +102,6 @@
             <p>+91 98765 43210</p>
         </div>
 
-
         <div class="info-box">
             <h3>Hours</h3>
             <p>Mon-Fri : 9am - 6pm</p>
@@ -83,11 +111,5 @@
 
 </div>
 
-
-</div>
-
-
-
-</div>
 </body>
 </html>
