@@ -1,71 +1,119 @@
 
-let submitBtn = document.getElementById("submitBtn");
+let addBtn = document.getElementById("addBtn");
 
-submitBtn.onclick = function(){
+addBtn.onclick = function(){
 
+    window.location.href = "addmember.html";
 
+};
 
-    let name = document.getElementById("name").value;
+let defaultMembers = [
 
-    let role = document.getElementById("role").value;
+    {
+        initials:"ST",
+        color:"#e6c36a",
+        name:"Sivatheerdha CA",
+        role:"Creative Director",
+        email:"sivatheerdha@gmail.com",
+        status:"Active"
+    },
 
-    let email = document.getElementById("email").value;
+    {
+        initials:"VR",
+        color:"#8cc7ff",
+        name:"Vyshnavi Ranjith",
+        role:"Lead UI/UX",
+        email:"vyshnaviranjith@gmail.com",
+        status:"Active"
+    },
 
-    let status = document.getElementById("status").value;
+    {
+        initials:"AL",
+        color:"#ff8fd2",
+        name:"Alien Lakshmi C",
+        role:"Brand Strategist",
+        email:"alienlakshmi@gmail.com",
+        status:"On Leave"
+    },
 
+    {
+        initials:"DJ",
+        color:"#8cc7ff",
+        name:"Devananda JA",
+        role:"Brand Strategist",
+        email:"devananda@gmail.com",
+        status:"Active"
+    }
 
+];
 
-    if(name == "" || role == "" || email == ""){
+localStorage.setItem(
+    "teamMembers",
+    JSON.stringify(defaultMembers)
+);
 
-        alert("Please fill all the form fields");
+let members = JSON.parse(localStorage.getItem("teamMembers"));
 
-        return;
+let table = document.getElementById("teamTable");
+
+function displayMembers(){
+
+    table.innerHTML = "";
+
+    for(let i=0; i<members.length; i++){
+
+        let statusClass;
+
+        if(members[i].status === "Active"){
+
+            statusClass = "active-status";
+
+        }
+        else{
+
+            statusClass = "leave";
+
+        }
+
+        table.innerHTML += `
+
+        <tr>
+
+            <td>
+
+                <div class="member">
+
+                    <div class="circle"
+                    style="background:${members[i].color};">
+
+                    ${members[i].initials}
+
+                    </div>
+
+                    ${members[i].name}
+
+                </div>
+
+            </td>
+
+            <td>${members[i].role}</td>
+
+            <td>${members[i].email}</td>
+
+            <td>
+
+                <span class="status ${statusClass}">
+                    ${members[i].status}
+                </span>
+
+            </td>
+
+        </tr>
+
+        `;
 
     }
 
+}
 
-
-    let initials = name
-    .split(" ")
-    .map(function(word){
-
-        return word[0];
-
-    })
-    .join("")
-    .toUpperCase();
-
-
-
-    let members =
-    JSON.parse(localStorage.getItem("teamMembers")) || [];
-
-
-
-    members.push({
-
-        initials:initials,
-        color:"#e6c36a",
-        name:name,
-        role:role,
-        email:email,
-        status:status
-
-    });
-
-
-
-    localStorage.setItem(
-        "teamMembers",
-        JSON.stringify(members)
-    );
-
-
-
-    alert("Member Added Successfully");
-
-
-
-    window.location.href = "team.html";
-
-};
+displayMembers();
