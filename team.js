@@ -47,10 +47,6 @@ let defaultMembers = [
 
 ];
 
-localStorage.setItem(
-    "teamMembers",
-    JSON.stringify(defaultMembers)
-);
 
 let members = JSON.parse(localStorage.getItem("teamMembers"));
 if(!members){
