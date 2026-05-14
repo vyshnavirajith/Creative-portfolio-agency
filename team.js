@@ -53,7 +53,16 @@ localStorage.setItem(
 );
 
 let members = JSON.parse(localStorage.getItem("teamMembers"));
+if(!members){
 
+    members = defaultMembers;
+
+    localStorage.setItem(
+        "teamMembers",
+        JSON.stringify(defaultMembers)
+    );
+
+}
 let table = document.getElementById("teamTable");
 
 function displayMembers(){
