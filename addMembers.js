@@ -2,7 +2,9 @@
 
 let submitBtn = document.getElementById("submitBtn");
 
-submitBtn.onclick = function(){
+submitBtn.onclick = function(event){
+
+    event.preventDefault();
 
     let name = document.getElementById("name").value;
 
@@ -12,22 +14,64 @@ submitBtn.onclick = function(){
 
     let status = document.getElementById("status").value;
 
-    if(name === "" || role === "" || email === ""){
 
-        alert("Please fill all fields");
+
+    if(name == ""){
+
+        alert("Please enter member name");
 
         return;
 
     }
 
+
+
+    if(role == ""){
+
+        alert("Please enter role");
+
+        return;
+
+    }
+
+
+
+    if(email == ""){
+
+        alert("Please enter email");
+
+        return;
+
+    }
+
+
+
+    if(status == ""){
+
+        alert("Please select status");
+
+        return;
+
+    }
+
+
+
     let initials = name
     .split(" ")
-    .map(word => word[0])
+    .map(function(word){
+
+        return word[0];
+
+    })
     .join("")
     .toUpperCase();
 
+
+
     let members =
     JSON.parse(localStorage.getItem("teamMembers")) || [];
+
+
 
     members.push({
 
@@ -40,14 +84,19 @@ submitBtn.onclick = function(){
 
     });
 
+
+
     localStorage.setItem(
         "teamMembers",
         JSON.stringify(members)
     );
 
+
+
     alert("Member Added Successfully");
+
+
 
     window.location.href = "team.html";
 
 };
-
