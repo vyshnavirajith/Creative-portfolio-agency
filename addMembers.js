@@ -2,32 +2,49 @@
 
 let submitBtn = document.getElementById("submitBtn");
 
-submitBtn.onclick = function(){
+function check(){
 
-    let name = document.getElementById("name").value;
 
-    let role = document.getElementById("role").value;
 
-    let email = document.getElementById("email").value;
+    let name = document.getElementById("name").value.trim();
+
+    let role = document.getElementById("role").value.trim();
+
+    let email = document.getElementById("email").value.trim();
 
     let status = document.getElementById("status").value;
 
-    if(name === "" || role === "" || email === ""){
 
-        alert("Please fill all fields");
+
+    
+    if(name == "" || role == "" || email == "" || status == ""){
+
+        alert("Form is not filled");
 
         return;
 
     }
 
+
+
     let initials = name
     .split(" ")
-    .map(word => word[0])
+    .map(function(word){
+
+        return word[0];
+
+    })
     .join("")
     .toUpperCase();
 
+
+
+
     let members =
     JSON.parse(localStorage.getItem("teamMembers")) || [];
+
+
+
 
     members.push({
 
@@ -40,12 +57,21 @@ submitBtn.onclick = function(){
 
     });
 
+
+
+
     localStorage.setItem(
         "teamMembers",
         JSON.stringify(members)
     );
 
+
+
+
     alert("Member Added Successfully");
+
+
+
 
     window.location.href = "team.html";
 
