@@ -1,7 +1,3 @@
-
-
-let submitBtn = document.getElementById("submitBtn");
-
 function check(){
 
 
@@ -16,7 +12,7 @@ function check(){
 
 
 
-    
+
     if(name == "" || role == "" || email == "" || status == ""){
 
         alert("Form is not filled");
@@ -24,6 +20,7 @@ function check(){
         return;
 
     }
+
 
 
 
@@ -68,11 +65,11 @@ function check(){
 
 
 
-
     alert("Member Added Successfully");
+
 
 
 
     window.location.href = "team.html";
 
-};
+}
