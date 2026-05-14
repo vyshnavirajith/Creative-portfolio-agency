@@ -6,9 +6,19 @@ if(form){
 
         e.preventDefault();
 
-        alert("Project Saved Successfully");
+        if(form.checkValidity()){
 
-        form.reset();
+            alert("Project Saved Successfully");
+
+            form.reset();
+
+        }
+        else{
+
+            alert("Please fill all fields");
+
+        }
 
     });
+
 }
