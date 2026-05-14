@@ -1,12 +1,4 @@
 
-let addBtn = document.getElementById("addBtn");
-
-addBtn.onclick = function(){
-
-    window.location.href = "addmember.html";
-
-};
-
 let defaultMembers = [
 
     {
@@ -47,14 +39,20 @@ let defaultMembers = [
 
 ];
 
-localStorage.setItem(
-    "teamMembers",
-    JSON.stringify(defaultMembers)
-);
 
-let members = JSON.parse(localStorage.getItem("teamMembers"));
+
+let addedMembers =
+JSON.parse(localStorage.getItem("teamMembers")) || [];
+
+
+
+let members = defaultMembers.concat(addedMembers);
+
+
 
 let table = document.getElementById("teamTable");
+
+
 
 function displayMembers(){
 
@@ -64,7 +62,7 @@ function displayMembers(){
 
         let statusClass;
 
-        if(members[i].status === "Active"){
+        if(members[i].status == "Active"){
 
             statusClass = "active-status";
 
@@ -74,6 +72,8 @@ function displayMembers(){
             statusClass = "leave";
 
         }
+
+
 
         table.innerHTML += `
 
