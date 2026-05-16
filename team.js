@@ -23,7 +23,7 @@ let defaultMembers = [
         color:"#8cc7ff",
         name:"Vyshnavi Ranjith",
         role:"Lead UI/UX",
-        email:"vyshnaviranjith@gmail.com",
+        email:"vyshnavirajith@gmail.com",
         status:"Active"
     },
 
